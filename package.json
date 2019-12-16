@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "Foobar library",
   "main": "dist/foobar.umd.js",
-  "module": "src/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "start": "webpack-dev-server --config=doc.webpack.config.js",
-    "build": "webpack --mode=production --config=lib.webpack.config.js",
+    "build": "tsc && webpack --mode=production --config=lib.webpack.config.js",
     "build:doc": "webpack --mode=production --config=doc.webpack.config.js",
     "test": "jest",
-    "eslint": "eslint src/**/*.js",
+    "eslint": "eslint src/**/*.ts",
     "stylelint": "stylelint src/**/*.css",
     "prettier": "prettier --write src/**"
   },
@@ -24,6 +25,7 @@
   },
   "homepage": "https://github.com/advclb/foobar#readme",
   "devDependencies": {
+    "@typescript-eslint/parser": "^2.11.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.3.2",
     "eslint": "^6.6.0",
@@ -42,6 +44,8 @@
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-prettier": "^1.1.1",
     "stylelint-scss": "^3.13.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.3",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
