@@ -4,7 +4,6 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "declaration": true,
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
     "moduleResolution": "node",
@@ -15,7 +14,7 @@
     "target": "es5",
     "noImplicitAny": true,
     "strictNullChecks": true,
-    "outDir": "dist"
+    "outDir": "lib"
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"]
