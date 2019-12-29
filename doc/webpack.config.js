@@ -4,9 +4,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-  entry: "./doc/index.ts",
+  entry: path.resolve(__dirname, "index.ts"),
   output: {
-    path: path.resolve(__dirname, "doc/dist")
+    path: path.resolve(__dirname, "dist")
   },
   module: {
     rules: [
